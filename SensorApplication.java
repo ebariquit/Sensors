@@ -20,7 +20,7 @@ public class SensorApplication extends JFrame {
 
 		
 		Sensor temAdapter = new TemperatureAdapter();
-		String temStatus = temAdapter.status();
+		//String temStatus = temAdapter.status();
 		double temValue = temAdapter.value();
 		Color temMeterColor = temAdapter.meterColor();
 		JPanel  temperaturePnl = new JPanel(new GridLayout(2,1));
@@ -29,13 +29,13 @@ public class SensorApplication extends JFrame {
 		temMeter.setValue((int)temValue);
 		temMeter.setForeground(temMeterColor);
 		JLabel temperatureLabel = new JLabel();
-		temperatureLabel.setText(temStatus +"  --->  "+ temValue);
+		temperatureLabel.setText(temAdapter.status() +"  --->  "+ temValue);
 		temperaturePnl.add(temMeter);
 		temperaturePnl.add(temperatureLabel);
 		add(temperaturePnl);
 		
 		Sensor preAdapter = new PressureAdapter();
-		String preStatus = preAdapter.status();
+		//String preStatus = preAdapter.status();
 		double preValue = preAdapter.value();
 		Color preMeterColor = preAdapter.meterColor();
 		JPanel pressurePnl = new JPanel(new GridLayout(2,1));
@@ -44,13 +44,13 @@ public class SensorApplication extends JFrame {
 		preMeter.setValue((int)preValue);
 		preMeter.setForeground(preMeterColor);
 		JLabel preLabel = new JLabel();
-		preLabel.setText(preStatus +"  --->  "+ preValue);
+		preLabel.setText(preAdapter.status() +"  --->  "+ preValue);
 		pressurePnl.add(preMeter);
 		pressurePnl.add(preLabel);
 		add(pressurePnl);
 		
 		Sensor radAdapter = new RadiationAdapter();
-		String radStatus = radAdapter.status();
+		//String radStatus = radAdapter.status();
 		double radValue = radAdapter.value();
 		Color radMeterColor = radAdapter.meterColor();
 		JPanel radPnl = new JPanel(new GridLayout(2,1));
@@ -59,7 +59,7 @@ public class SensorApplication extends JFrame {
 		radMeter.setValue((int)radValue);
 		radMeter.setForeground(radMeterColor);
 		JLabel radLabel = new JLabel();
-		radLabel.setText(radStatus +"  --->  "+ radValue);
+		radLabel.setText(radAdapter.status() +"  --->  "+ radValue);
 		radPnl.add(radMeter);
 		radPnl.add(radLabel);
 		add(radPnl);
