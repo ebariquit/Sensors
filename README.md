@@ -2,4 +2,4 @@
 Bellevue College
 CS410 Assignment2
 
-Practicing adapter design patterns
+Obejctive: practicing adapter design patterns
